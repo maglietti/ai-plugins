@@ -90,6 +90,17 @@ installer only prints a `PATH` hint; it never edits your shell profile. That cop
 appears the first time a plugin starts the MCP server, so either let the agent run
 once first, or install the shell yourself before configuring it.
 
+## Documentation
+
+Once a plugin is installed, [docs/using-the-skills.md](docs/using-the-skills.md)
+covers how the agent picks a skill, how to phrase a task so the right one loads,
+and how to confirm any of it is working. Two multi-step workflows are written up
+as recipes, both backed by end-to-end tests: [exposing a schema over
+REST](docs/recipes/rest-service.md) and [versioning a schema with
+MSM](docs/recipes/schema-lifecycle.md). For working on this repository itself,
+see [docs/getting-started.md](docs/getting-started.md). Full index in
+[docs/README.md](docs/README.md).
+
 ## Plugin variants
 
 Each agent ships the plugin variants below — all built by the same
@@ -146,6 +157,7 @@ not pulled in by it. See [pi/README.md](pi/README.md).
 ai-plugins/
 ├── .claude-plugin/marketplace.json    # Claude Code marketplace entry
 ├── .agents/plugins/marketplace.json   # Codex marketplace entry (Codex reads this, not .codex-plugin/)
+├── docs/                              # guides: using the skills, recipes/, getting-started
 ├── additional-skills/                 # repo-local skills, grouped by topic subfolder
 │   ├── sql/                            # vendored into dev + sql (e.g. mariadb-schema-create-script)
 │   ├── rest/                           # MariaDB REST Service skills (dev only)
